@@ -46,8 +46,8 @@ export const featuredProjects: Project[] = [
     problem: "Monitoring thousands of tickers in real-time requires optimized server actions and efficient frontend rendering.",
     solution: "Developed a live dashboard for 1,000+ tickers with role-based access control and 30% faster page loads via React Server Components.",
     tech: ["Next.js", "TypeScript", "MongoDB", "Tailwind CSS"],
-    link: "#",
-    images: ["/projects/stock-market.png"],
+    link: "https://stock-tacker-app.vercel.app",
+    images: ["/projects/stock-market.png","/projects/stock-market-2.png","/projects/stock-market-3.png","/projects/stock-market-4.png"],
     featured: false,
   },
 ];
