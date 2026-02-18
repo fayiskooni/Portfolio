@@ -26,8 +26,8 @@ export const featuredProjects: Project[] = [
     problem: "Real-time communication requires low latency and high scalability for concurrent video and chat sessions.",
     solution: "Integrated Stream SDKs with Node.js to support up to 20 concurrent participants with presence indicators and call controls.",
     tech: ["Node.js", "React", "MongoDB", "Stream SDK", "Express"],
-    link: "#",
-    images: ["/projects/video-chat.png"],
+    link: "https://livechat-videocallapp.onrender.com",
+    images: ["/projects/video-chat.png","/projects/video-chat-2.png","/projects/video-chat-3.png","/projects/video-chat-4.png","/projects/video-chat-5.png"],
     featured: true,
   },
   {
@@ -36,8 +36,8 @@ export const featuredProjects: Project[] = [
     problem: "Visualizing complex family structures requires efficient data modeling and high-performance rendering.",
     solution: "Architected a PostgreSQL-backed system supporting 100+ members per tree with automated lineage visualization and <300ms query times.",
     tech: ["React", "PostgreSQL", "Node.js", "Tailwind CSS"],
-    link: "#",
-    images: ["/projects/family-tree.png"],
+    link: "https://family-tree.fayiskooni.workers.dev/",
+    images: ["/projects/family-tree.png","/projects/family-tree-2.png","/projects/family-tree-3.png","/projects/family-tree-4.png","/projects/family-tree-5.png","/projects/family-tree-6.png"],
     featured: true,
   },
   {

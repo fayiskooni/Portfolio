@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import { toast } from "sonner";
+import { PdfViewer } from "./PdfViewer";
 
 const navLinks = [
   { name: "Work", href: "#work" },
@@ -16,6 +18,18 @@ const navLinks = [
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isPdfViewerOpen, setIsPdfViewerOpen] = useState(false);
+
+  const handleDownload = () => {
+    toast.success("Resume downloaded", {
+      description: "Would you like to view it now?",
+      action: {
+        label: "View",
+        onClick: () => setIsPdfViewerOpen(true),
+      },
+      duration: 10000,
+    });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,6 +40,7 @@ export const Navbar = () => {
   }, []);
 
   return (
+    <>
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4",
@@ -52,10 +67,12 @@ export const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/Muhammed_Fayis_CV.pdf"
+            download
+            onClick={handleDownload}
             className="px-5 py-2 rounded-full accent-gradient text-white text-sm font-semibold hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all duration-300"
           >
-            Hire Me
+            Download CV
           </a>
         </div>
 
@@ -88,15 +105,25 @@ export const Navbar = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/Muhammed_Fayis_CV.pdf"
+              download
               className="mt-2 w-full text-center px-6 py-3 rounded-xl accent-gradient text-white font-semibold"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                handleDownload();
+              }}
             >
-              Hire Me
+              Download CV
             </a>
           </motion.div>
         )}
       </AnimatePresence>
     </nav>
+    <PdfViewer
+        isOpen={isPdfViewerOpen}
+        onClose={() => setIsPdfViewerOpen(false)}
+        pdfUrl="/Muhammed_Fayis_CV.pdf"
+      />
+    </>
   );
 };

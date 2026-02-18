@@ -130,6 +130,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
         <div className="flex gap-4">
           <a 
             href={project.link} 
+            target="_blank"
             className="flex items-center gap-2 px-8 py-4 rounded-full bg-foreground text-background font-bold text-sm hover:scale-105 transition-transform"
           >
             Live Preview <ExternalLink size={16} />
