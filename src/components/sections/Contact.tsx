@@ -17,12 +17,28 @@ export const Contact = () => {
 
     setIsLoading(true);
 
+
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      console.error("EmailJS configuration missing:", {
+        serviceId: serviceId ? "Present" : "Missing",
+        templateId: templateId ? "Present" : "Missing",
+        publicKey: publicKey ? "Present" : "Missing",
+      });
+      toast.error("Email service not configured correctly. Please contact support.");
+      setIsLoading(false);
+      return;
+    }
+
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+        serviceId,
+        templateId,
         formRef.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
+        publicKey
       )
       .then(
         () => {
