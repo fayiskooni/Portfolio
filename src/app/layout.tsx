@@ -16,15 +16,37 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammed Fayis K | Full-Stack Developer",
-  description: "Muhammed Fayis K is a Full-Stack Developer specializing in building scalable SaaS platforms, real-time systems, and AI-powered web applications.",
-  keywords: ["Muhammed Fayis K", "Fayis K", "Full Stack Developer", "Next.js", "React", "Node.js", "SaaS Developer"],
-  authors: [{ name: "Muhammed Fayis K" }],
+  metadataBase: new URL('https://fayiskooni.xyz'),
+  title: "Fayis Kooni | Full-Stack Developer",
+  description: "Fayis Kooni is a Full-Stack Developer specializing in building scalable SaaS platforms, real-time systems, and AI-powered web applications.",
+  keywords: ["Fayis Kooni", "Full Stack Developer", "Next.js", "React", "Node.js", "SaaS Developer"],
+  authors: [{ name: "Fayis Kooni" }],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: "Muhammed Fayis K | Full-Stack Developer",
+    title: "Fayis Kooni | Full-Stack Developer",
     description: "Full-Stack Developer crafting scalable & visually refined digital products.",
+    url: 'https://fayiskooni.xyz',
+    siteName: 'Fayis Kooni Portfolio',
     type: "website",
     locale: "en_US",
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Fayis Kooni | Full-Stack Developer',
+    description: 'Full-Stack Developer crafting scalable & visually refined digital products.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -33,11 +55,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fayis Kooni",
+    "jobTitle": "Full Stack Developer",
+    "url": "https://fayiskooni.xyz"
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <body
         className={`${inter.variable} ${outfit.variable} font-sans antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ScrollProgress />
         {children}
         <BackToTop />
