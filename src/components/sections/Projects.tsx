@@ -127,7 +127,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           </div>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4 items-center">
           <a 
             href={project.link} 
             target="_blank"
@@ -135,6 +135,11 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
           >
             Live Preview <ExternalLink size={16} />
           </a>
+          {project.hostedOn && (
+            <div className="flex items-center gap-2 px-5 py-3 rounded-full border border-white/10 glass text-xs font-semibold text-muted-foreground">
+              Hosted on <span className="text-accent">{project.hostedOn}</span>
+            </div>
+          )}
         </div>
       </div>
     </motion.div>

@@ -27,7 +27,7 @@ export const Hero = () => {
           </motion.span>
           
           <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-8 tracking-tight">
-            <span className="block text-xl md:text-2xl text-accent mb-4 font-semibold uppercase tracking-widest">Fayis Kooni</span>
+            <span className="block text-xl md:text-2xl text-accent mb-4 font-semibold uppercase tracking-widest">Muhammed Fayis Kooni</span>
             Full-Stack Developer <br />
             <span className="text-muted-foreground italic font-medium">Building Scalable</span> <br />
             SaaS Platforms

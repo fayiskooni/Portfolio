@@ -52,7 +52,7 @@ export const Navbar = () => {
         isScrolled ? "glass shadow-xl" : "bg-transparent"
       )}>
         <a href="#" className="text-xl font-display font-bold tracking-tight">
-          Fayis<span className="text-accent">.</span>K
+          Fayis
         </a>
 
         {/* Desktop Nav */}

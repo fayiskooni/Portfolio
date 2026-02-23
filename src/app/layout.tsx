@@ -17,24 +17,24 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fayiskooni.xyz'),
-  title: "Fayis Kooni | Full-Stack Developer",
-  description: "Fayis Kooni is a Full-Stack Developer specializing in building scalable SaaS platforms, real-time systems, and AI-powered web applications.",
-  keywords: ["Fayis Kooni", "Full Stack Developer", "Next.js", "React", "Node.js", "SaaS Developer"],
-  authors: [{ name: "Fayis Kooni" }],
+  title: "Muhammed Fayis K | Full-Stack Developer",
+  description: "Fayis is a Full-Stack Developer specializing in building scalable SaaS platforms, real-time systems, and AI-powered web applications.",
+  keywords: ["Muhammed Fayis K", "Full Stack Developer", "Next.js", "React", "Node.js", "SaaS Developer"],
+  authors: [{ name: "Muhammed Fayis K" }],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Fayis Kooni | Full-Stack Developer",
+    title: "Muhammed Fayis K | Full-Stack Developer",
     description: "Full-Stack Developer crafting scalable & visually refined digital products.",
     url: 'https://fayiskooni.xyz',
-    siteName: 'Fayis Kooni Portfolio',
+    siteName: 'Muhammed Fayis K Portfolio',
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fayis Kooni | Full-Stack Developer',
+    title: "Muhammed Fayis K | Full-Stack Developer",
     description: 'Full-Stack Developer crafting scalable & visually refined digital products.',
   },
   robots: {
@@ -58,7 +58,7 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Fayis Kooni",
+    "name": "Muhammed Fayis K",
     "jobTitle": "Full Stack Developer",
     "url": "https://fayiskooni.xyz"
   };
