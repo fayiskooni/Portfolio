@@ -4,10 +4,10 @@ import { Section } from "@/components/Section";
 import { motion } from "framer-motion";
 
 const stats = [
-  { label: "Projects Delivered", value: "15+" },
-  { label: "Concurrent Users", value: "20+" },
-  { label: "Query Speed", value: "<300ms" },
-  { label: "Tech Stack", value: "Full-Stack" },
+  { value: "4 Live", label: "Projects Deployed" },
+  { value: "3+", label: "SaaS & Full-Stack Apps" },
+  { value: "RAG +", label: "Real-Time Systems" },
+  { value: "Full-Stack", label: "(React to PostgreSQL)" },
 ];
 
 export const About = () => {
@@ -49,10 +49,10 @@ export const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card p-8 rounded-3xl text-center border-white/5"
+              className="glass-card p-5 rounded-2xl text-center border-white/5"
             >
-              <div className="text-4xl font-display font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-xs font-bold text-accent uppercase tracking-widest">{stat.label}</div>
+              <div className="text-2xl font-display font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-[10px] font-bold text-accent uppercase tracking-widest leading-relaxed">{stat.label}</div>
             </motion.div>
           ))}
         </div>

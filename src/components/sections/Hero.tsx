@@ -26,11 +26,11 @@ export const Hero = () => {
             Available for new projects
           </motion.span>
           
-          <h1 className="text-5xl md:text-7xl font-display font-bold leading-[1.1] mb-8 tracking-tight">
-            <span className="block text-xl md:text-2xl text-accent mb-4 font-semibold uppercase tracking-widest">Muhammed Fayis Kooni</span>
-            Full-Stack Developer <br />
-            <span className="text-muted-foreground italic font-medium">Building Scalable</span> <br />
-            SaaS Platforms
+          <h1 className="font-display leading-[1.1] mb-8 tracking-tight">
+            <span className="block text-base md:text-lg text-accent mb-4 font-medium uppercase tracking-widest">Muhammed Fayis Kooni</span>
+            <span className="block text-5xl md:text-7xl lg:text-8xl font-black text-white mb-4">Full-Stack Developer</span>
+            <span className="text-3xl md:text-5xl text-muted-foreground italic font-medium">Building Scalable</span> <br />
+            <span className="text-4xl md:text-6xl font-bold">SaaS Platforms</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed font-light">

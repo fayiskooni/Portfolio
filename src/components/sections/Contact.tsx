@@ -150,17 +150,9 @@ export const Contact = () => {
 export const Footer = () => {
   return (
     <footer className="py-12 border-t border-white/5 px-6">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div className="text-xl font-display font-bold">
-          Fayis<span className="text-accent">.</span>K
-        </div>
+      <div className="max-w-7xl mx-auto flex justify-center items-center">
         <div className="text-muted-foreground text-sm font-medium">
-          © {new Date().getFullYear()} Muhammed Fayis K. Crafted with precision.
-        </div>
-        <div className="flex gap-6">
-          <a href="https://github.com/fayiskooni" target="_blank" className="text-muted-foreground hover:text-accent transition-colors"><Github size={20} /></a>
-          <a href="https://linkedin.com/in/muhammed-fayis-kooni" target="_blank" className="text-muted-foreground hover:text-accent transition-colors"><Linkedin size={20} /></a>
-          <a href="mailto:fayiskooni.dev@gmail.com" className="text-muted-foreground hover:text-accent transition-colors"><Mail size={20} /></a>
+          © 2025 Muhammed Fayis K. Built with Next.js.
         </div>
       </div>
     </footer>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const stack = {
   Frontend: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Radix UI"],
   Backend: ["Node.js", "Express", "REST APIs", "WebSockets", "JWT", "Clerk"],
-  Database: ["PostgreSQL", "MySQL", "MongoDB", "Convex", "Redis"],
+  Database: ["PostgreSQL", "MongoDB", "Convex"],
   Tools: ["GitHub", "Vercel", "Inngest", "Stream SDK", "CI/CD", "Gemini AI"],
 };
 

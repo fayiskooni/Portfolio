@@ -12,7 +12,7 @@ const values = [
   },
   {
     title: "Secure Auth Systems",
-    description: "Experience building robust identity management using NextAuth and modern security best practices.",
+    description: "JWT via HttpOnly cookies, Clerk Organizations, and multi-tenant authorization patterns.",
     icon: <ShieldCheck size={24} className="text-blue-500" />,
   },
   {

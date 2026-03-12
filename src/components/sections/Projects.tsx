@@ -109,7 +109,7 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       <div className="w-full lg:w-1/2">
         <div className="flex flex-wrap gap-2 mb-6">
           {project.tech.map((t) => (
-            <span key={t} className="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold tracking-widest uppercase text-muted-foreground border border-white/5">
+            <span key={t} className="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold tracking-widest uppercase text-muted-foreground border border-white/5 whitespace-nowrap">
               {t}
             </span>
           ))}
