@@ -28,7 +28,7 @@ export const Hero = () => {
           
           <h1 className="font-display leading-[1.1] mb-8 tracking-tight">
             <span className="block text-base md:text-lg text-accent mb-4 font-medium uppercase tracking-widest">Muhammed Fayis Kooni</span>
-            <span className="block text-5xl md:text-7xl lg:text-8xl font-black text-white mb-4">Full-Stack Developer</span>
+            <span className="block text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-white/90 to-white/40 mb-4 pb-2">Full-Stack Developer</span>
             <span className="text-3xl md:text-5xl text-muted-foreground italic font-medium">Building Scalable</span> <br />
             <span className="text-4xl md:text-6xl font-bold">SaaS Platforms</span>
           </h1>
@@ -56,7 +56,7 @@ export const Hero = () => {
               href="#contact"
               className="px-8 py-4 rounded-full glass border border-white/10 text-foreground font-semibold hover:bg-white/5 transition-all duration-300"
             >
-              Let's Build Something
+              Let&apos;s Build Something
             </motion.a>
           </div>
         </motion.div>

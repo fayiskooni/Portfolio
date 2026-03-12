@@ -12,7 +12,7 @@ export interface Project {
 
 export const featuredProjects: Project[] = [
   {
-    name: "Echo SaaS — AI Chat Widget",
+    name: "Echo — AI Customer Support SaaS",
     description: "Multi-tenant AI customer support SaaS with embeddable widgets.",
     problem: "Businesses need automated intelligent support that integrates into existing platforms without complex setup.",
     solution: "Built a RAG pipeline using Gemini text-embedding-004 generating 768-dimensional vectors, supporting 3 embed types (HTML, React, Next.js) via a JS snippet that injects a cross-origin iframe with postMessage communication. Tenant data is fully isolated by Clerk orgId.",

@@ -58,10 +58,10 @@ export const Contact = () => {
     <Section id="contact">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div>
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-8">Let's build <br />the future.</h2>
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-8">Let&apos;s build <br />the future.</h2>
           <p className="text-xl text-muted-foreground mb-12">
             Have an idea for a project or looking for a full-stack developer 
-            to join your team? I'm always open to discussing new opportunities.
+            to join your team? I&apos;m always open to discussing new opportunities.
           </p>
 
           <div className="space-y-6">

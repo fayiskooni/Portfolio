@@ -49,7 +49,7 @@ export const About = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="glass-card p-5 rounded-2xl text-center border-white/5"
+              className="glass-card p-5 rounded-2xl text-center flex flex-col justify-center"
             >
               <div className="text-2xl font-display font-bold text-white mb-1">{stat.value}</div>
               <div className="text-[10px] font-bold text-accent uppercase tracking-widest leading-relaxed">{stat.label}</div>

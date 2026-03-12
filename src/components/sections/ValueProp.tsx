@@ -38,9 +38,9 @@ export const ValueProp = () => {
           <motion.div
             key={i}
             whileHover={{ y: -10 }}
-            className="p-8 glass-card rounded-3xl"
+            className="p-8 glass-card rounded-3xl group"
           >
-            <div className="w-12 h-12 rounded-2xl glass mb-6 flex items-center justify-center border-white/10">
+            <div className="w-14 h-14 rounded-2xl bg-white/[0.03] mb-6 flex items-center justify-center border border-white/10 group-hover:border-accent/30 group-hover:bg-accent/10 transition-colors">
               {v.icon}
             </div>
             <h3 className="text-xl font-bold mb-4">{v.title}</h3>

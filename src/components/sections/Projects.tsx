@@ -30,11 +30,12 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
-      className="flex flex-col lg:flex-row gap-12 items-center group"
+      className="flex flex-col lg:flex-row gap-8 lg:gap-12 lg:items-start group"
     >
-      {/* Project Image/Preview */}
-      <div className="w-full lg:w-1/2 aspect-video glass rounded-3xl overflow-hidden relative border border-white/10 transition-colors group-hover:border-accent/30">
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none" />
+      {/* Project Image and Tech Tags */}
+      <div className="w-full lg:w-1/2 flex flex-col gap-6">
+        <div className="w-full aspect-video glass rounded-3xl overflow-hidden relative border border-white/10 transition-colors group-hover:border-accent/30 shrink-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none" />
         
         {images.length > 0 ? (
           <div className="relative w-full h-full overflow-hidden">
@@ -103,27 +104,34 @@ const ProjectCard = ({ project, index }: { project: Project; index: number }) =>
             </div>
           </div>
         )}
-      </div>
+        </div>
 
-      {/* Project Details */}
-      <div className="w-full lg:w-1/2">
-        <div className="flex flex-wrap gap-2 mb-6">
+        {/* Tech Tags below image */}
+        <div className="flex flex-wrap gap-2">
           {project.tech.map((t) => (
-            <span key={t} className="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold tracking-widest uppercase text-muted-foreground border border-white/5 whitespace-nowrap">
+            <span key={t} className="px-3 py-1 bg-white/5 rounded-full text-[10px] font-bold tracking-widest uppercase text-muted-foreground border border-white/5 whitespace-nowrap transition-colors hover:text-foreground hover:bg-white/10 cursor-default">
               {t}
             </span>
           ))}
         </div>
-        <h3 className="text-3xl md:text-4xl font-display font-bold mb-6">{project.name}</h3>
+      </div>
+
+      {/* Project Details */}
+      <div className="w-full lg:w-1/2 flex flex-col pt-2 lg:pt-0">
+        <h3 className="text-3xl md:text-4xl font-display font-bold mb-8 lg:-mt-2">{project.name}</h3>
         
-        <div className="space-y-6 mb-8">
-          <div>
-            <h4 className="text-xs font-bold text-accent uppercase tracking-widest mb-1">Problem</h4>
-            <p className="text-muted-foreground leading-relaxed">{project.problem}</p>
+        <div className="space-y-4 mb-8">
+          <div className="bg-white/[0.02] border border-white/[0.05] p-5 rounded-2xl hover:bg-white/[0.04] transition-colors">
+            <h4 className="flex items-center gap-2 text-[10px] font-bold text-accent uppercase tracking-widest mb-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent/70" /> Problem
+            </h4>
+            <p className="text-muted-foreground text-sm leading-relaxed">{project.problem}</p>
           </div>
-          <div>
-            <h4 className="text-xs font-bold text-accent uppercase tracking-widest mb-1">Solution</h4>
-            <p className="text-muted-foreground leading-relaxed">{project.solution}</p>
+          <div className="bg-white/[0.02] border border-white/[0.05] p-5 rounded-2xl hover:bg-white/[0.04] transition-colors">
+            <h4 className="flex items-center gap-2 text-[10px] font-bold text-accent uppercase tracking-widest mb-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-accent/70" /> Solution
+            </h4>
+            <p className="text-muted-foreground text-sm leading-relaxed">{project.solution}</p>
           </div>
         </div>
 
