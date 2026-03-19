@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/cover.png", // 👈 IMPORTANT
+        url: "/cover-new.png",
         width: 1200,
         height: 630,
         alt: "Muhammed Fayis K Portfolio",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     title: "Muhammed Fayis K | Full-Stack Developer",
     description:
       "Full-Stack Developer crafting scalable & visually refined digital products.",
-    images: ["/cover.png"],
+    images: ["/cover-new.png"],
   },
   robots: {
     index: true,
