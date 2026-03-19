@@ -16,26 +16,45 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fayiskooni.xyz'),
+  metadataBase: new URL("https://fayiskooni.xyz"),
   title: "Muhammed Fayis K | Full-Stack Developer",
-  description: "Fayis is a Full-Stack Developer specializing in building scalable SaaS platforms, real-time systems, and AI-powered web applications.",
-  keywords: ["Muhammed Fayis K", "Full Stack Developer", "Next.js", "React", "Node.js", "SaaS Developer"],
+  description:
+    "Fayis is a Full-Stack Developer specializing in building scalable SaaS platforms, real-time systems, and AI-powered web applications.",
+  keywords: [
+    "Muhammed Fayis K",
+    "Full Stack Developer",
+    "Next.js",
+    "React",
+    "Node.js",
+    "SaaS Developer",
+  ],
   authors: [{ name: "Muhammed Fayis K" }],
   alternates: {
-    canonical: '/',
+    canonical: "/",
   },
   openGraph: {
     title: "Muhammed Fayis K | Full-Stack Developer",
-    description: "Full-Stack Developer crafting scalable & visually refined digital products.",
-    url: 'https://fayiskooni.xyz',
-    siteName: 'Muhammed Fayis K Portfolio',
+    description:
+      "Full-Stack Developer crafting scalable & visually refined digital products.",
+    url: "https://fayiskooni.xyz",
+    siteName: "Muhammed Fayis K Portfolio",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/cover.png", // 👈 IMPORTANT
+        width: 1200,
+        height: 630,
+        alt: "Muhammed Fayis K Portfolio",
+      },
+    ],
   },
   twitter: {
-    card: 'summary_large_image',
+    card: "summary_large_image",
     title: "Muhammed Fayis K | Full-Stack Developer",
-    description: 'Full-Stack Developer crafting scalable & visually refined digital products.',
+    description:
+      "Full-Stack Developer crafting scalable & visually refined digital products.",
+    images: ["/cover.png"],
   },
   robots: {
     index: true,
@@ -43,9 +62,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -58,9 +77,9 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Muhammed Fayis K",
-    "jobTitle": "Full Stack Developer",
-    "url": "https://fayiskooni.xyz"
+    name: "Muhammed Fayis K",
+    jobTitle: "Full Stack Developer",
+    url: "https://fayiskooni.xyz",
   };
 
   return (
