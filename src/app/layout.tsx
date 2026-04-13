@@ -17,27 +17,41 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://fayiskooni.xyz"),
-  title: "Muhammed Fayis K | Full-Stack Developer",
+  title: "Fayis K (Muhammed Fayis K) | Full-Stack Developer — Fayis Kooni",
   description:
-    "Fayis is a Full-Stack Developer specializing in building scalable SaaS platforms, real-time systems, and AI-powered web applications.",
+    "Fayis K, also known as Muhammed Fayis K or Fayis Kooni, is a Full-Stack Developer specializing in scalable SaaS platforms, real-time systems, and AI-powered web applications using React, Next.js, and Node.js.",
   keywords: [
+    "Fayis",
+    "Fayis K",
     "Muhammed Fayis K",
+    "Fayis Kooni",
+    "Muhammed Fayis Kooni",
+    "fayiskooni",
     "Full Stack Developer",
-    "Next.js",
-    "React",
-    "Node.js",
+    "Full-Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Node.js Developer",
     "SaaS Developer",
+    "Web Developer Kerala",
+    "Fayis Developer",
+    "Fayis K Portfolio",
   ],
-  authors: [{ name: "Muhammed Fayis K" }],
+  authors: [{ name: "Muhammed Fayis K", url: "https://fayiskooni.xyz" }],
+  creator: "Muhammed Fayis K",
+  publisher: "Muhammed Fayis K",
   alternates: {
-    canonical: "/",
+    canonical: "https://fayiskooni.xyz",
+  },
+  verification: {
+    google: "googleca125da0d0bd82f6",
   },
   openGraph: {
-    title: "Muhammed Fayis K | Full-Stack Developer",
+    title: "Fayis K (Muhammed Fayis K) — Full-Stack Developer | Fayis Kooni",
     description:
-      "Full-Stack Developer crafting scalable & visually refined digital products.",
+      "Fayis K is a Full-Stack Developer crafting scalable SaaS platforms and AI-powered web applications. Explore the portfolio of Muhammed Fayis K (Fayis Kooni).",
     url: "https://fayiskooni.xyz",
-    siteName: "Muhammed Fayis K Portfolio",
+    siteName: "Fayis K — Muhammed Fayis K Portfolio",
     type: "website",
     locale: "en_US",
     images: [
@@ -45,15 +59,15 @@ export const metadata: Metadata = {
         url: "/cover-new.png",
         width: 1200,
         height: 630,
-        alt: "Muhammed Fayis K Portfolio",
+        alt: "Fayis K — Muhammed Fayis K, Full-Stack Developer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammed Fayis K | Full-Stack Developer",
+    title: "Fayis K (Muhammed Fayis K) — Full-Stack Developer | Fayis Kooni",
     description:
-      "Full-Stack Developer crafting scalable & visually refined digital products.",
+      "Full-Stack Developer crafting scalable SaaS platforms & AI-powered web apps. Portfolio of Fayis Kooni (Muhammed Fayis K).",
     images: ["/cover-new.png"],
   },
   robots: {
@@ -74,12 +88,58 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = {
+  const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://fayiskooni.xyz/#person",
     name: "Muhammed Fayis K",
+    alternateName: ["Fayis", "Fayis K", "Fayis Kooni", "Muhammed Fayis Kooni"],
+    givenName: "Muhammed Fayis",
+    familyName: "K",
     jobTitle: "Full Stack Developer",
+    description:
+      "Fayis K is a Full-Stack Developer specializing in building scalable SaaS platforms, real-time systems, and AI-powered web applications.",
     url: "https://fayiskooni.xyz",
+    email: "fayiskooni@gmail.com",
+    telephone: "+919207892745",
+    image: "https://fayiskooni.xyz/cover-new.png",
+    sameAs: [
+      "https://github.com/fayiskooni",
+      "https://linkedin.com/in/muhammed-fayis-kooni",
+    ],
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Bharathidasan University",
+      alternateName: "BDU",
+    },
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Prisma",
+      "REST APIs",
+      "WebSockets",
+      "AI-powered applications",
+      "SaaS Development",
+      "Full Stack Development",
+    ],
+    knowsLanguage: ["en", "ml"],
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://fayiskooni.xyz/#website",
+    name: "Fayis K — Muhammed Fayis K Portfolio",
+    alternateName: ["Fayis Kooni Portfolio", "Fayis K Portfolio"],
+    url: "https://fayiskooni.xyz",
+    description:
+      "Official portfolio of Fayis K (Muhammed Fayis K), a Full-Stack Developer building scalable SaaS platforms and AI-powered web applications.",
+    publisher: {
+      "@id": "https://fayiskooni.xyz/#person",
+    },
   };
 
   return (
@@ -89,7 +149,11 @@ export default function RootLayout({
       >
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <ScrollProgress />
         {children}

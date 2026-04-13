@@ -152,7 +152,7 @@ export const Footer = () => {
     <footer className="py-12 border-t border-white/5 px-6">
       <div className="max-w-7xl mx-auto flex justify-center items-center">
         <div className="text-muted-foreground text-sm font-medium">
-          © 2025 Muhammed Fayis K. Built with Next.js.
+          © {new Date().getFullYear()} Muhammed Fayis K (Fayis Kooni). Built with Next.js.
         </div>
       </div>
     </footer>

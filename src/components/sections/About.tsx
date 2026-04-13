@@ -18,13 +18,14 @@ export const About = () => {
           <div className="absolute -top-20 -left-20 w-64 h-64 bg-accent/10 rounded-full blur-3xl -z-10" />
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-8">Engineering with <br /><span className="text-accent italic">Precision & Speed</span></h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Muhammed Fayis K is a Full-Stack Developer with hands-on experience building 
-            production-ready web applications and SaaS platforms. With a strong background 
-            in React, Next.js, Node.js, and TypeScript, he has a proven ability to deliver 
-            scalable, secure, end-to-end applications.
+            Muhammed Fayis K (Fayis Kooni) is a Full-Stack Developer with hands-on 
+            experience building production-ready web applications and SaaS platforms. 
+            Known professionally as Fayis K, he has a strong background in React, Next.js, 
+            Node.js, and TypeScript — with a proven ability to deliver scalable, secure, 
+            end-to-end applications.
           </p>
           <p className="text-muted-foreground leading-relaxed mb-8">
-            His expertise spans across RESTful APIs, real-time systems using WebSockets, 
+            Fayis specializes in RESTful APIs, real-time systems using WebSockets, 
             and AI-powered features like RAG pipelines. He focuses on creating 
             seamless user experiences backed by robust, optimized infrastructure.
           </p>
