@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+    <section aria-label="Fayis K — Full-Stack Developer Introduction" className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
       {/* Background Gradients */}
       <div className="absolute top-20 right-[-10%] w-[40%] h-[40%] bg-accent/20 rounded-full blur-[120px] -z-10 animate-pulse-slow" />
       <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[120px] -z-10" />

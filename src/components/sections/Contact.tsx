@@ -150,10 +150,14 @@ export const Contact = () => {
 export const Footer = () => {
   return (
     <footer className="py-12 border-t border-white/5 px-6">
-      <div className="max-w-7xl mx-auto flex justify-center items-center">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">
         <div className="text-muted-foreground text-sm font-medium">
           © {new Date().getFullYear()} Muhammed Fayis K (Fayis Kooni). Built with Next.js.
         </div>
+        <span className="hidden sm:inline text-muted-foreground/30">·</span>
+        <a href="/who-is-fayis" className="text-muted-foreground/60 text-sm hover:text-accent transition-colors">
+          Who is Fayis?
+        </a>
       </div>
     </footer>
   );

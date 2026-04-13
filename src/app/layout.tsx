@@ -81,6 +81,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "google-site-name": "Fayis K — Full-Stack Developer",
+  },
 };
 
 export default function RootLayout({
@@ -142,6 +145,25 @@ export default function RootLayout({
     },
   };
 
+  const profilePageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://fayiskooni.xyz/#profilepage",
+    name: "Fayis K — Full-Stack Developer Portfolio",
+    url: "https://fayiskooni.xyz",
+    mainEntity: {
+      "@id": "https://fayiskooni.xyz/#person",
+    },
+    dateCreated: "2025-01-01",
+    dateModified: new Date().toISOString().split("T")[0],
+    about: {
+      "@id": "https://fayiskooni.xyz/#person",
+    },
+    isPartOf: {
+      "@id": "https://fayiskooni.xyz/#website",
+    },
+  };
+
   return (
     <html lang="en" className="scroll-smooth">
       <body
@@ -154,6 +176,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(profilePageJsonLd) }}
         />
         <ScrollProgress />
         {children}
